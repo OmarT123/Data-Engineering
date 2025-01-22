@@ -1,0 +1,44 @@
+[2024-12-20T00:25:23.826+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T00:25:23.861+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-20T00:18:26.896066+00:00 [queued]>
+[2024-12-20T00:25:23.881+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-20T00:18:26.896066+00:00 [queued]>
+[2024-12-20T00:25:23.883+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-20T00:25:23.909+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_dashboard> on 2024-12-20 00:18:26.896066+00:00
+[2024-12-20T00:25:23.922+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=74) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-20T00:25:23.926+0000] {standard_task_runner.py:72} INFO - Started process 115 to run task
+[2024-12-20T00:25:23.927+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_pipeline', 'create_dashboard', 'manual__2024-12-20T00:18:26.896066+00:00', '--job-id', '104', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmp84ph8wo2']
+[2024-12-20T00:25:23.933+0000] {standard_task_runner.py:105} INFO - Job 104: Subtask create_dashboard
+[2024-12-20T00:25:24.019+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-20T00:18:26.896066+00:00 [running]> on host bcc836ae4d03
+[2024-12-20T00:25:24.172+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='omar_abdelaty' AIRFLOW_CTX_DAG_ID='fintech_pipeline' AIRFLOW_CTX_TASK_ID='create_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2024-12-20T00:18:26.896066+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-20T00:18:26.896066+00:00'
+[2024-12-20T00:25:24.175+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T00:25:24.846+0000] {logging_mixin.py:190} INFO - Dash is running on http://127.0.0.1:8050/
+[2024-12-20T00:25:24.845+0000] {dash.py:2160} INFO - Dash is running on http://127.0.0.1:8050/
+
+[2024-12-20T00:25:24.876+0000] {logging_mixin.py:190} INFO -  * Serving Flask app 'fintech_dashboard'
+[2024-12-20T00:25:24.877+0000] {logging_mixin.py:190} INFO -  * Debug mode: on
+[2024-12-20T00:27:19.854+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-20T00:27:19.866+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-20T00:27:19.880+0000] {process_utils.py:132} INFO - Sending 15 to group 115. PIDs of all processes in the group: [120, 122, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 115]
+[2024-12-20T00:27:19.882+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 115
+[2024-12-20T00:27:20.122+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=143, status='terminated', started='00:25:33') (143) terminated with exit code None
+[2024-12-20T00:27:20.209+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=135, status='terminated', started='00:25:29') (135) terminated with exit code None
+[2024-12-20T00:27:20.244+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=149, status='terminated', started='00:25:37') (149) terminated with exit code None
+[2024-12-20T00:27:20.263+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=137, status='terminated', started='00:25:29') (137) terminated with exit code None
+[2024-12-20T00:27:20.284+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=122, status='terminated', started='00:25:28') (122) terminated with exit code None
+[2024-12-20T00:27:20.293+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=138, status='terminated', started='00:25:29') (138) terminated with exit code None
+[2024-12-20T00:27:20.305+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=144, status='terminated', started='00:25:34') (144) terminated with exit code None
+[2024-12-20T00:27:20.313+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T00:27:20.317+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=139, status='terminated', started='00:25:30') (139) terminated with exit code None
+[2024-12-20T00:27:20.324+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fintech_pipeline, task_id=create_dashboard, run_id=manual__2024-12-20T00:18:26.896066+00:00, execution_date=20241220T001826, start_date=20241220T002523, end_date=20241220T002720
+[2024-12-20T00:27:20.331+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=140, status='terminated', started='00:25:30') (140) terminated with exit code None
+[2024-12-20T00:27:20.350+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=136, status='terminated', started='00:25:29') (136) terminated with exit code None
+[2024-12-20T00:27:20.385+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=147, status='terminated', started='00:25:35') (147) terminated with exit code None
+[2024-12-20T00:27:20.410+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=141, status='terminated', started='00:25:31') (141) terminated with exit code None
+[2024-12-20T00:27:20.429+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=120, status='terminated', started='00:25:24') (120) terminated with exit code None
+[2024-12-20T00:27:20.469+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=150, status='terminated', started='00:25:37') (150) terminated with exit code None
+[2024-12-20T00:27:20.567+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=115, status='terminated', exitcode=0, started='00:25:23') (115) terminated with exit code 0
+[2024-12-20T00:27:20.628+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=146, status='terminated', started='00:25:35') (146) terminated with exit code None
+[2024-12-20T00:27:20.642+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=148, status='terminated', started='00:25:36') (148) terminated with exit code None
+[2024-12-20T00:27:20.677+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=145, status='terminated', started='00:25:34') (145) terminated with exit code None
+[2024-12-20T00:27:20.810+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=142, status='terminated', started='00:25:32') (142) terminated with exit code None

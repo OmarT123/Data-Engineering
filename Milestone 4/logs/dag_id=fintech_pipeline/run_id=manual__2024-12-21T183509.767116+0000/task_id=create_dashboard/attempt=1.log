@@ -1,0 +1,35 @@
+[2024-12-21T18:35:38.920+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-21T18:35:38.943+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-21T18:35:09.767116+00:00 [queued]>
+[2024-12-21T18:35:38.956+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-21T18:35:09.767116+00:00 [queued]>
+[2024-12-21T18:35:38.957+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-21T18:35:38.974+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_dashboard> on 2024-12-21 18:35:09.767116+00:00
+[2024-12-21T18:35:38.982+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=219) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-21T18:35:38.985+0000] {standard_task_runner.py:72} INFO - Started process 232 to run task
+[2024-12-21T18:35:38.985+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_pipeline', 'create_dashboard', 'manual__2024-12-21T18:35:09.767116+00:00', '--job-id', '206', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmpr9b3f2w2']
+[2024-12-21T18:35:38.988+0000] {standard_task_runner.py:105} INFO - Job 206: Subtask create_dashboard
+[2024-12-21T18:35:39.046+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_pipeline.create_dashboard manual__2024-12-21T18:35:09.767116+00:00 [running]> on host 8fb55a7fa0da
+[2024-12-21T18:35:39.138+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='omar_abdelaty' AIRFLOW_CTX_DAG_ID='fintech_pipeline' AIRFLOW_CTX_TASK_ID='create_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2024-12-21T18:35:09.767116+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-21T18:35:09.767116+00:00'
+[2024-12-21T18:35:39.139+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-21T18:35:39.597+0000] {logging_mixin.py:190} INFO - Dash is running on http://0.0.0.0:8050/
+[2024-12-21T18:35:39.597+0000] {dash.py:2160} INFO - Dash is running on http://0.0.0.0:8050/
+
+[2024-12-21T18:35:39.608+0000] {logging_mixin.py:190} INFO -  * Serving Flask app 'fintech_dashboard'
+[2024-12-21T18:35:39.609+0000] {logging_mixin.py:190} INFO -  * Debug mode: off
+[2024-12-21T18:35:39.610+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://172.19.0.6:8050
+[2024-12-21T18:35:39.611+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2024-12-21T18:35:44.408+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "GET / HTTP/1.1" 200 -
+[2024-12-21T18:35:44.623+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "GET /_dash-dependencies HTTP/1.1" 200 -
+[2024-12-21T18:35:44.624+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "GET /_dash-layout HTTP/1.1" 200 -
+[2024-12-21T18:35:44.655+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+[2024-12-21T18:35:44.660+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "[36mGET /_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+[2024-12-21T18:35:44.675+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:44] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+[2024-12-21T18:35:46.267+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:46] "POST /_dash-update-component HTTP/1.1" 200 -
+[2024-12-21T18:35:46.290+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:46] "POST /_dash-update-component HTTP/1.1" 200 -
+[2024-12-21T18:35:46.301+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:46] "POST /_dash-update-component HTTP/1.1" 200 -
+[2024-12-21T18:35:46.376+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:46] "POST /_dash-update-component HTTP/1.1" 200 -
+[2024-12-21T18:35:46.378+0000] {_internal.py:224} INFO - 172.19.0.1 - - [21/Dec/2024 18:35:46] "POST /_dash-update-component HTTP/1.1" 200 -

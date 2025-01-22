@@ -1,0 +1,6 @@
+Emp Title,Emp Length,Home Ownership,Annual Inc,Annual Inc Joint,Verification Status,Zip Code,Addr State,Avg Cur Bal,Tot Cur Bal,Loan Id,Loan Status,Loan Amount,State,Funded Amount,Term,Int Rate,Grade,Issue Date,Pymnt Plan,Type,Purpose,Description
+Vice President of Student Affairs,10+ years,MORTGAGE,165000.0,,Source Verified,730xx,OK,51997.0,467970.0,230910,Fully Paid,25625.0,OK,25625.0, 60 months,0.2534,25,18 September 2018,False,Individual,debt_consolidation,Debt consolidation
+Human Resources,1 year,MORTGAGE,92000.0,,Source Verified,207xx,MD,11008.0,187136.0,218803,Current,24000.0,MD,24000.0, 60 months,0.1399,15,16 January 2016,False,INDIVIDUAL,debt_consolidation,Debt consolidation
+Director of PR and Marketing,10+ years,MORTGAGE,110000.0,,Not Verified,032xx,NH,19596.0,215558.0,231342,Fully Paid,26000.0,NH,26000.0, 36 months,0.1099,7,15 November 2015,False,Individual,debt_consolidation,Debt consolidation
+Ultrasound Technician,10+ years,RENT,90000.0,221000.0,Verified,940xx,CA,9600.0,76799.0,198564,Current,20000.0,CA,20000.0, 60 months,0.1356,14,18 December 2018,False,Joint App,debt_consolidation,Debt consolidation
+Nurse,2 years,MORTGAGE,38000.0,,Verified,301xx,GA,5932.0,77114.0,134551,Current,13000.0,GA,13000.0, 60 months,0.1449,13,16 July 2016,False,INDIVIDUAL,debt_consolidation,Debt consolidation

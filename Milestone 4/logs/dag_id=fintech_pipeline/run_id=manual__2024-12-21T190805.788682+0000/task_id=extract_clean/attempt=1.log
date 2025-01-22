@@ -1,0 +1,28 @@
+[2024-12-21T19:08:08.087+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-21T19:08:08.105+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_pipeline.extract_clean manual__2024-12-21T19:08:05.788682+00:00 [queued]>
+[2024-12-21T19:08:08.114+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_pipeline.extract_clean manual__2024-12-21T19:08:05.788682+00:00 [queued]>
+[2024-12-21T19:08:08.116+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-21T19:08:08.133+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): extract_clean> on 2024-12-21 19:08:05.788682+00:00
+[2024-12-21T19:08:08.140+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=453) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-21T19:08:08.143+0000] {standard_task_runner.py:72} INFO - Started process 466 to run task
+[2024-12-21T19:08:08.143+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_pipeline', 'extract_clean', 'manual__2024-12-21T19:08:05.788682+00:00', '--job-id', '221', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmps6f5ti5w']
+[2024-12-21T19:08:08.145+0000] {standard_task_runner.py:105} INFO - Job 221: Subtask extract_clean
+[2024-12-21T19:08:08.190+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_pipeline.extract_clean manual__2024-12-21T19:08:05.788682+00:00 [running]> on host 64e93409f4c0
+[2024-12-21T19:08:08.269+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='omar_abdelaty' AIRFLOW_CTX_DAG_ID='fintech_pipeline' AIRFLOW_CTX_TASK_ID='extract_clean' AIRFLOW_CTX_EXECUTION_DATE='2024-12-21T19:08:05.788682+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-21T19:08:05.788682+00:00'
+[2024-12-21T19:08:08.271+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-21T19:08:08.282+0000] {logging_mixin.py:190} INFO - Started Cleaning
+[2024-12-21T19:08:08.623+0000] {logging_mixin.py:190} INFO - Dataset loaded successfully!
+[2024-12-21T19:08:08.624+0000] {logging_mixin.py:190} INFO - Started Cleaning
+[2024-12-21T19:08:08.626+0000] {logging_mixin.py:190} INFO - Fixing Inconsistent Data
+[2024-12-21T19:08:08.661+0000] {logging_mixin.py:190} INFO - Handling Missing Values
+[2024-12-21T19:08:11.294+0000] {logging_mixin.py:190} INFO - Create Lookup Table
+[2024-12-21T19:08:16.170+0000] {logging_mixin.py:190} INFO - Data Cleaned
+[2024-12-21T19:08:16.866+0000] {logging_mixin.py:190} INFO - Cleaned data saved
+[2024-12-21T19:08:16.871+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-21T19:08:16.880+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-21T19:08:16.881+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fintech_pipeline, task_id=extract_clean, run_id=manual__2024-12-21T19:08:05.788682+00:00, execution_date=20241221T190805, start_date=20241221T190808, end_date=20241221T190816
+[2024-12-21T19:08:16.944+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-21T19:08:16.966+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-21T19:08:16.970+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

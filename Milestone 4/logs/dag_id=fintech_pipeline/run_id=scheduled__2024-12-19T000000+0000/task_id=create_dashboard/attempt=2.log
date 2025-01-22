@@ -1,0 +1,31 @@
+[2024-12-21T18:33:21.123+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-21T18:33:21.143+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard scheduled__2024-12-19T00:00:00+00:00 [queued]>
+[2024-12-21T18:33:21.152+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_pipeline.create_dashboard scheduled__2024-12-19T00:00:00+00:00 [queued]>
+[2024-12-21T18:33:21.153+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 2
+[2024-12-21T18:33:21.171+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): create_dashboard> on 2024-12-19 00:00:00+00:00
+[2024-12-21T18:33:21.178+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=72) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-21T18:33:21.180+0000] {standard_task_runner.py:72} INFO - Started process 85 to run task
+[2024-12-21T18:33:21.180+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_pipeline', 'create_dashboard', 'scheduled__2024-12-19T00:00:00+00:00', '--job-id', '198', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmpdps0b3kr']
+[2024-12-21T18:33:21.183+0000] {standard_task_runner.py:105} INFO - Job 198: Subtask create_dashboard
+[2024-12-21T18:33:21.234+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_pipeline.create_dashboard scheduled__2024-12-19T00:00:00+00:00 [running]> on host 8fb55a7fa0da
+[2024-12-21T18:33:21.319+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='omar_abdelaty' AIRFLOW_CTX_DAG_ID='fintech_pipeline' AIRFLOW_CTX_TASK_ID='create_dashboard' AIRFLOW_CTX_EXECUTION_DATE='2024-12-19T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-12-19T00:00:00+00:00'
+[2024-12-21T18:33:21.320+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-21T18:33:21.708+0000] {logging_mixin.py:190} INFO - Dash is running on http://0.0.0.0:8050/
+[2024-12-21T18:33:21.708+0000] {dash.py:2160} INFO - Dash is running on http://0.0.0.0:8050/
+
+[2024-12-21T18:33:21.745+0000] {logging_mixin.py:190} INFO -  * Serving Flask app 'fintech_dashboard'
+[2024-12-21T18:33:21.746+0000] {logging_mixin.py:190} INFO -  * Debug mode: off
+[2024-12-21T18:33:21.747+0000] {_internal.py:224} INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8050
+ * Running on http://172.19.0.6:8050
+[2024-12-21T18:33:21.748+0000] {_internal.py:224} INFO - [33mPress CTRL+C to quit[0m
+[2024-12-21T18:35:01.949+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-12-21T18:35:01.951+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2024-12-21T18:35:01.953+0000] {process_utils.py:132} INFO - Sending 15 to group 85. PIDs of all processes in the group: [85]
+[2024-12-21T18:35:01.955+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 85
+[2024-12-21T18:35:01.956+0000] {taskinstance.py:3093} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-12-21T18:35:01.980+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-21T18:35:02.008+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=85, status='terminated', exitcode=0, started='18:33:20') (85) terminated with exit code 0

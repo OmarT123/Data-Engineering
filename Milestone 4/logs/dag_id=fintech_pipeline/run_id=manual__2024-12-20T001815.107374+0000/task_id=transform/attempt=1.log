@@ -1,0 +1,33 @@
+[2024-12-20T00:18:31.831+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-20T00:18:31.854+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: fintech_pipeline.transform manual__2024-12-20T00:18:15.107374+00:00 [queued]>
+[2024-12-20T00:18:31.865+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: fintech_pipeline.transform manual__2024-12-20T00:18:15.107374+00:00 [queued]>
+[2024-12-20T00:18:31.867+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2024-12-20T00:18:31.889+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): transform> on 2024-12-20 00:18:15.107374+00:00
+[2024-12-20T00:18:31.899+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=116) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-12-20T00:18:31.903+0000] {standard_task_runner.py:72} INFO - Started process 129 to run task
+[2024-12-20T00:18:31.901+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'fintech_pipeline', 'transform', 'manual__2024-12-20T00:18:15.107374+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/fintech_dag.py', '--cfg-path', '/tmp/tmpixtqrnur']
+[2024-12-20T00:18:31.905+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask transform
+[2024-12-20T00:18:31.964+0000] {task_command.py:467} INFO - Running <TaskInstance: fintech_pipeline.transform manual__2024-12-20T00:18:15.107374+00:00 [running]> on host c0e4640604d2
+[2024-12-20T00:18:32.069+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='omar_abdelaty' AIRFLOW_CTX_DAG_ID='fintech_pipeline' AIRFLOW_CTX_TASK_ID='transform' AIRFLOW_CTX_EXECUTION_DATE='2024-12-20T00:18:15.107374+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-20T00:18:15.107374+00:00'
+[2024-12-20T00:18:32.071+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-20T00:18:32.089+0000] {logging_mixin.py:190} INFO - Transform Started
+[2024-12-20T00:18:32.466+0000] {logging_mixin.py:190} INFO - Dataset loaded successfully!
+[2024-12-20T00:18:32.467+0000] {logging_mixin.py:190} INFO - Handling Outliers
+[2024-12-20T00:18:32.484+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/pandas/core/arraylike.py:396: RuntimeWarning: overflow encountered in exp
+  result = getattr(ufunc, method)(*inputs, **kwargs)
+
+[2024-12-20T00:18:33.457+0000] {logging_mixin.py:190} INFO - Encoding
+[2024-12-20T00:18:33.544+0000] {logging_mixin.py:190} INFO - Mapping saved to letter_grade_labels.csv
+[2024-12-20T00:18:33.551+0000] {logging_mixin.py:190} INFO - Mapping saved to state_labels.csv
+[2024-12-20T00:18:33.558+0000] {logging_mixin.py:190} INFO - Mapping saved to addr_state_labels.csv
+[2024-12-20T00:18:33.559+0000] {logging_mixin.py:190} INFO - Normalization
+[2024-12-20T00:18:33.561+0000] {logging_mixin.py:190} INFO - Transform Complete
+[2024-12-20T00:18:34.783+0000] {logging_mixin.py:190} INFO - Transformed data saved to csv
+[2024-12-20T00:18:34.785+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-20T00:18:34.798+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-20T00:18:34.799+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=fintech_pipeline, task_id=transform, run_id=manual__2024-12-20T00:18:15.107374+00:00, execution_date=20241220T001815, start_date=20241220T001831, end_date=20241220T001834
+[2024-12-20T00:18:34.851+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-20T00:18:35.032+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-20T00:18:35.035+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

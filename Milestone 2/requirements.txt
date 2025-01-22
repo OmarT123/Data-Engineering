@@ -1,0 +1,8 @@
+pandas
+psycopg2-binary
+kafka-python
+sqlalchemy
+scikit-learn
+docker
+requests
+beautifulsoup4
